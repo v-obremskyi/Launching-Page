@@ -1,0 +1,88 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.text {
+    animation: text-load 300ms ease-in;
+}
+
+.photo {
+    animation: text-load 400ms ease-in;
+}
+
+p:first-child {
+    margin-top: 8rem;
+    font-size: 3.125rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    font-family: 'Give You Glory', cursive;
+    font-size: 2rem;
+    color: #000;
+    margin: 0;
+    margin-left: 5%;
+}
+
+.email {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    /*&::before {
+        content: url("../assets/side_frame.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 3%;
+    }*/
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.photo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .25rem;
+    margin-left: 0;
+    margin-bottom: 10rem;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+        margin-top: 40%;
+    }
+
+    .text {
+        margin-top: 30%;
+        margin-left: 20%;
+    }
+
+    .email::before {
+        margin-left: 12%;
+        margin-top: 20%;
+    }
+}
+
+@keyframes text-load {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
